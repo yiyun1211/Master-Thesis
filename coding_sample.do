@@ -6,7 +6,7 @@ cd "/Users/yangyiyun/Desktop"
 
 *** Create the independent variable: Climate Finance (Source: AidData)*****  
 
-import delimited "/Users/yangyiyun/Desktop/MPP/24fall/Thesis/Data Workshop/Financing_the_2030_Agenda_for_Sustainable_Development_Dataset_Version_1_0 3/Aggregates_Financing_the_2030_Agenda_for_Sustainable_Development_Dataset_Version_1_0.csv", clear  
+import delimited "/Users/yangyiyun/Desktop/MPP/24fall/Thesis/Data Workshop/Financing_the_2030_Agenda_for_Sustainable_Development_Dataset_Version_1_0 3/Aggregates_Financing_the_2030_Agenda_for_Sustainable_Development_Dataset_Version_1_0.csv", clear  ///Please download the data with the link in the readme file
 
 keep year donor_name recipient_name sdg_7_sum sdg_13_sum  /// Keep only relevant variables from the dataset  
 
@@ -65,7 +65,7 @@ save wbdata.dta, replace
 //save the dataset including independent variable and control variables(exluding corruption index)
 
 ***creating control variables (corruption) (source: TransparencyInternational)*****
-import excel "/Users/yangyiyun/Desktop/MPP/24fall/Thesis/Data Workshop/corruption.xlsx", firstrow clear
+import excel "/Users/yangyiyun/Desktop/MPP/24fall/Thesis/Data Workshop/corruption.xlsx", firstrow clear /// Please download the data with the link in the readme file
 rename CPIScore2013 CPIscore2013
 rename CPIScore2012 CPIscore2012
 reshape long CPIscore, i(Country) j(year) 
